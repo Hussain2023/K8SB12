@@ -1,0 +1,12 @@
+apiversion: v1
+kind: service
+metadata:
+   name: mysvc
+spec:
+ type: Nodeport
+ ports:
+  - targetport: 80
+    port: 80
+    nodeport: 30009
+selector:
+   type: webserver
